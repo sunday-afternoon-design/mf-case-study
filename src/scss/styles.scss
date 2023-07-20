@@ -1,0 +1,75 @@
+@import "bootstrap/scss/bootstrap";
+@font-face {
+    font-family: 'planar';
+    src: url('../../public/vf.woff2') format('woff2');
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 50vw;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #ccc;
+    outline: none;
+    /* Remove outline */
+    opacity: 0.7;
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;
+    /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */
+}
+
+// input[type="range"]::-webkit-slider-thumb {
+//     -webkit-appearance: none;
+//     appearance: none;
+//     width: 30px;
+//     height: 30px;
+//     border-radius: 50%;
+//     background-color: black;
+//     cursor: pointer;
+//     transition: background-color 0.3s;
+//     position: relative;
+//     left: -5px;
+// }
+// input[type="range"]::-webkit-slider-thumb::before {
+//     content: 'A';
+//     /* Text content */
+//     color: white;
+//     border-color: green;
+//     border-width: 5px;
+//     /* Text color */
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+// }
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    border-radius: 50%;
+    /* Slider handle height */
+    background: #04AA6D;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: #04AA6D;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
