@@ -19,7 +19,6 @@ let mousey;
 const wInput = document.getElementById("weightRange");
 const slantInput = document.getElementById("slantRange");
 const textD = document.getElementById("textD")
-const textF = document.getElementById("textF")
 const textM = document.getElementById("textM")
 
 let time = 0
@@ -114,20 +113,27 @@ function clamp(val, min, max) {
 
 textD.addEventListener('click', function() {
     strtest = "DIRECTOR"
-    init()
-});
 
-textF.addEventListener('click', function() {
-    strtest = "FILM PRODUCTION"
     init()
+    textM.classList.remove('mybuttonwhite');
+    textD.classList.remove('mybuttonblack');
+    textM.classList.add('mybuttonblack');
+
+    textD.classList.add('mybuttonwhite')
 });
 
 textM.addEventListener('click', function() {
     strtest = "MAGNETIC FIELD"
     init()
+    textD.classList.remove('mybuttonwhite');
+    textM.classList.remove('mybuttonblack');
+    textD.classList.add('mybuttonblack');
+
+    textM.classList.add('mybuttonwhite')
+
 });
 
-let slantb = document.getElementById("slantLabelb")
-let svalue = 45
-    // slantb.style.fontVariationSettings = `'slnt' ${svalue}`;
-slantb.style.setProperty("--slant", 45);
+// let slantb = document.getElementById("slantLabelb")
+// let svalue = 45
+//     // slantb.style.fontVariationSettings = `'slnt' ${svalue}`;
+// slantb.style.setProperty("--slant", 45);
