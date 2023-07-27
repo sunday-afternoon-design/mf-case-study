@@ -28,7 +28,7 @@ function init() {
 
     splitstr = strtest.split('');
     p.innerHTML = '';
-    MFspan=[]
+    MFspan = []
     for (let i = 0; i < splitstr.length; i++) {
         let ic = document.createElement("span");
         ic.innerHTML = splitstr[i];
@@ -57,7 +57,18 @@ tick()
 
 function logo() {
     let weightInput = 11 - wInput.value
-    for (let i = 0; i < 
+
+    // let weightLabel = document.getElementById("weightLabel");
+    // let weightThumb = document.querySelector("#weightRange::-webkit-slider-thumb");
+    // const weightThumbRect = weightThumb.getBoundingClientRect();
+    // const slantThumbRect = slantThumb.getBoundingClientRect();
+
+    // let slantLabel = document.getElementById("slantLabel");
+    // let slantThumb = document.querySelector("#slantRange::-webkit-slider-thumb");
+    // slantLabel.style.left = `${slantThumb.style.left}`;
+
+
+    for (let i = 0; i <
         p.childNodes.length; i++) {
 
         let posx = getOffset(p.childNodes[i]).left;
@@ -90,33 +101,33 @@ document.addEventListener('mousemove', (e) => {
 
 function getOffset(el) {
     const rect = el.getBoundingClientRect();
-    return {left: rect.left, top: rect.top};
+    return { left: rect.left, top: rect.top };
 }
 
 function clamp(val, min, max) {
-    return val > max
-        ? max
-        : val < min
-            ? min
-            : val;
+    return val > max ?
+        max :
+        val < min ?
+        min :
+        val;
 }
 
 textD.addEventListener('click', function() {
-    strtest="DIRECTOR"
+    strtest = "DIRECTOR"
     init()
 });
 
 textF.addEventListener('click', function() {
-    strtest="FILM PRODUCTION"
+    strtest = "FILM PRODUCTION"
     init()
 });
 
 textM.addEventListener('click', function() {
-    strtest="MAGNETIC FIELD"
+    strtest = "MAGNETIC FIELD"
     init()
 });
 
 let slantb = document.getElementById("slantLabelb")
 let svalue = 45
-// slantb.style.fontVariationSettings = `'slnt' ${svalue}`;
+    // slantb.style.fontVariationSettings = `'slnt' ${svalue}`;
 slantb.style.setProperty("--slant", 45);
