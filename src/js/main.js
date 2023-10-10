@@ -34,8 +34,8 @@ function init() {
         MFspan.push(ic)
         p.append(MFspan[i]);
     }
-    console.log(p)
-    console.log(splitstr)
+    // console.log(p)
+    // console.log(splitstr)
 }
 
 init()
@@ -113,12 +113,10 @@ function clamp(val, min, max) {
 
 textD.addEventListener('click', function() {
     strtest = "DIRECTOR"
-
     init()
     textM.classList.remove('mybuttonwhite');
     textD.classList.remove('mybuttonblack');
     textM.classList.add('mybuttonblack');
-
     textD.classList.add('mybuttonwhite')
 });
 
@@ -128,9 +126,7 @@ textM.addEventListener('click', function() {
     textD.classList.remove('mybuttonwhite');
     textM.classList.remove('mybuttonblack');
     textD.classList.add('mybuttonblack');
-
     textM.classList.add('mybuttonwhite')
-
 });
 
 // let slantb = document.getElementById("slantLabelb")
