@@ -5,7 +5,7 @@ import * as bootstrap from 'bootstrap'
 let cursor = document.getElementById("cursor");
 
 let splitstr
-let strtest = "DIRECTOR"
+let strtest = "MAGNETIC FIELD"
 let MFspan = [];
 let p = document.getElementById("p")
 
